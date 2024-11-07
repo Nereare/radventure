@@ -6,9 +6,12 @@ require_relative 'radventure/meta'
 module Radventure
   # Main class to run the game
   class Game
+    @meta = nil
+
     # Constructor method.
     # @returns [Game] Game execution
     def initialize
+      @meta = Meta.new('game.yml')
       $stdout.clear_screen
       intro
     end
@@ -16,11 +19,11 @@ module Radventure
     # Outputs a simple intro to the game.
     # @return [void]
     def intro
-      puts "< #{Radventure::TITLE} >"
-      puts "Version #{Radventure::VERSION}"
-      puts "By #{Radventure::AUTHOR}"
+      puts "< #{@meta.title} >"
+      puts "Version #{@meta.version}"
+      puts "By #{@meta.author}"
       puts ''
-      puts Radventure::DESCRIPTION
+      puts @meta.description
       wait_for_key
     end
 
