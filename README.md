@@ -1,6 +1,6 @@
 # Ruby Adventure
 
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/Nereare/radventure)](https://github.com/Nereare/radventure)
+[![Dynamic YAML Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2FNereare%2Fradventure%2Frefs%2Fheads%2Fmaster%2Fradventure.yml&query=%24.version&style=flat&label=Version)](https://github.com/Nereare/radventure)
 [![License](https://img.shields.io/github/license/Nereare/radventure.svg)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE-OF-CONDUCT.md)
 
