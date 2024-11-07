@@ -15,11 +15,15 @@ module Radventure
   #   @return [String] The author name of the game
   # @!attribute [r] license
   #   @return [String] The license name of the game
+  # @!attribute [r] year
+  #   @return [String] The year/years of development/release of the game
+  # @!attribute [r] prelude
+  #   @return [String, nil] A text block containg the game's prelude, or `nil` if none is set
   #
   # @example Initialize metadata
   #   meta = Meta.new 'game.yml'
   class Meta
-    attr_reader :title, :description, :version, :author, :license
+    attr_reader :title, :description, :version, :author, :license, :year, :prelude
 
     # Constructor method.
     #
@@ -32,6 +36,8 @@ module Radventure
       @version = meta['version']
       @author = meta['author']
       @license = meta['license']
+      @year = meta['year'].to_s
+      @prelude = meta['prelude'] || ''
     end
 
     private
