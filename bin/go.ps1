@@ -13,7 +13,7 @@ bundle install
 
 Write-Host 'Now, run application...'
 try {
-  ruby .\console
+  ruby bin\console
   exit 0
 } catch {
   Write-Error '⚠️ Could not invoke ruby.'
