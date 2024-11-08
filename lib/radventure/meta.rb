@@ -51,11 +51,12 @@ module Radventure
         YAML.load_file yaml_file
       else
         {
-          'title' => 'Foo',
-          'description' => 'Lorem ipsum.',
-          'version' => '0.1.0',
+          'title' => 'No Title',
+          'description' => 'No description so far.',
+          'version' => 'x.y.z',
           'author' => 'No One',
-          'license' => 'WTFPL'
+          'license' => 'CC0',
+          'year' => '1917'
         }
       end
     end
