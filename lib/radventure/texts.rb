@@ -32,14 +32,14 @@ module Radventure
     end
 
     def self.header
-      y, x = $stdout.winsize
-      puts Rainbow("+#{'=' * (x - 2)}+").italic
-
-      i = 0
-      until i == (y - 2)
-        puts '+'
-        i += 1
-      end
+      # y, x = $stdout.winsize
+      # puts Rainbow("+#{'=' * (x - 2)}+").italic
+      #
+      # i = 0
+      # until i == (y - 2)
+      #   puts '+'
+      #   i += 1
+      # end
     end
 
     # Prints a "press any key" message and waits for, well, any key.
