@@ -3,6 +3,7 @@
 require 'require_all'
 require_all 'lib'
 
+# The main module for the `radventure` repository/package
 module Radventure
   # Main class to run the game
   class Game
