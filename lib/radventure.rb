@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'radventure/furniture'
-require_relative 'radventure/item'
-require_relative 'radventure/meta'
-require_relative 'radventure/texts'
+require 'require_all'
+require_all 'lib'
 
 module Radventure
   # Main class to run the game

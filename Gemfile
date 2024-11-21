@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'rainbow', '~> 3.1'
+gem 'require_all', '~> 3.0'
 
 group :development do
   gem 'rake', '~> 13.0'
