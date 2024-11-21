@@ -2,3 +2,5 @@ Metrics/MethodLength:
   Max: 25
 Metrics/ParameterLists:
   Max: 20
+Naming/MethodParameterName:
+  Min: 2
