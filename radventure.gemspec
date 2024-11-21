@@ -2,9 +2,10 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'radventure'
-  spec.version = '0.1.0'
+  spec.version = '0.1.0.alpha'
   spec.authors = ['Igor Padoim']
   spec.email = ['igorpadoim@gmail.com']
+  spec.license = 'WTFPL'
 
   spec.summary = 'A framework to develop text-base RPG games.'
   spec.description = 'A framework to develop text-base RPG games.'
@@ -12,6 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage = 'https://nereare.github.io/radventure/'
   spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['bug_tracker_uri'] = 'https://github.com/Nereare/radventure/issues'
   spec.metadata['source_code_uri'] = 'https://github.com/Nereare/radventure'
   spec.metadata['changelog_uri'] = 'https://github.com/Nereare/radventure/blob/master/CHANGELOG.md'
 
