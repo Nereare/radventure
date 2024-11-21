@@ -25,7 +25,7 @@ module Radventure
   class Meta
     attr_reader :title, :description, :version, :author, :license, :year, :prelude
 
-    # Constructor method.
+    # Constructor method
     #
     # @param yaml_file [String] The path to the game's metadata YAML file
     # @return [Meta] Game metadata object

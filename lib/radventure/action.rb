@@ -18,24 +18,28 @@ module Radventure
   class Action
     attr_reader :name, :skill, :success, :failure, :status
 
-    # Action constructor.
+    # Action constructor
     #
     # @param name [String] The general name of the action
     # @param skill [String] The name of the skill to test of the action
     # @param dc [Integer] The skill's Difficulty Class of the action
     # @param success [String] The success text of the action
     # @param failure [String] The failure text of the action
+    # @param success_cache [Array<Item, Money>] A list of items and money caches available when succeeded
+    # @param failure_cache [Array<Item, Money>] A list of items and money caches available when failed
     # @return [Action] The Action object
-    def initialize(name, skill, dc, success, failure)
-      @name         = name.strip
-      @skill        = skill.strip
-      @dc           = dc.to_i
-      @success      = success.strip
-      @failure      = failure.strip
-      @status       = nil
+    def initialize(name, skill, dc, success, failure, success_cache = [], failure_cache = [])
+      @name          = name.strip
+      @skill         = skill.strip
+      @dc            = dc.to_i
+      @success       = success.strip
+      @failure       = failure.strip
+      @status        = nil
+      @success_cache = success_cache
+      @failure_cache = failure_cache
     end
 
-    # Try to roll for this action.
+    # Try to roll for this action
     #
     # @param roll [Integer] The result of the roll
     # @return [Boolean] Whether the check succeeded or not
@@ -43,6 +47,23 @@ module Radventure
       @status = roll.to_i >= @success if @status.nil?
 
       @status
+    end
+
+    # Fetch rewards, if applicable
+    #
+    # @return [false, Array] Returns `false` if the action was not tried, or an array, otherwise
+    def rewards
+      if @status.nil?
+        false
+      elsif @status
+        @success_cache
+      else
+        @failure_cache
+      end
+    end
+
+    def get_reward(index)
+      #
     end
   end
 end

@@ -5,7 +5,7 @@ module Radventure
   class Furniture
     attr_reader :name, :view, :desc
 
-    # Furniture constructor.
+    # Furniture constructor
     #
     # @param name [String] The name of the furniture item
     # @param view [String] The initial description of the furniture item

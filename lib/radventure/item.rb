@@ -49,7 +49,7 @@ module Radventure
     attr_reader :name, :type, :short_desc, :desc, :value, :weight, :is_magic, :is_known, :true_name, :true_type,
                 :true_desc
 
-    # Item constructor.
+    # Item constructor
     #
     # @param name [String] The name of the item
     # @param type [String] The type (and subtype, where applicable) of the item

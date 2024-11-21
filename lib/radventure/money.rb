@@ -14,7 +14,7 @@ module Radventure
   class Money
     attr_reader :platinum, :gold, :silver, :copper
 
-    # Constructor method.
+    # Constructor method
     #
     # @param platinum [Integer] The amount of platinum for this money cache
     # @param gold [Integer] The amount of gold for this money cache

@@ -6,7 +6,8 @@ require 'rainbow'
 module Radventure
   # Method for generic text functionalities
   class Texts
-    # Outputs a simple intro to the game.
+    # Outputs a simple intro to the game
+    #
     # @param meta [Hash] A hash containing the game metadata
     # @return [void]
     def self.intro(meta)
@@ -20,7 +21,8 @@ module Radventure
       clear
     end
 
-    # Outputs a simple intro to the game.
+    # Outputs a simple intro to the game
+    #
     # @param meta [Hash] A hash containing the game metadata
     # @return [void]
     def self.prelude(meta)
@@ -42,7 +44,8 @@ module Radventure
       # end
     end
 
-    # Prints a "press any key" message and waits for, well, any key.
+    # Prints a "press any key" message and waits for, well, any key
+    #
     # @return [void]
     def self.wait_for_key
       puts ''
@@ -50,7 +53,8 @@ module Radventure
       gets
     end
 
-    # Clears the console screen.
+    # Clears the console screen
+    #
     # @return [void]
     def self.clear
       $stdout.clear_screen
