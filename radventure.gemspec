@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'A framework to develop text-base RPG games.'
   spec.description = 'A framework to develop text-base RPG games.'
-  spec.required_ruby_version = '>= 3.0.0'
+  spec.required_ruby_version = '>= 3.3.0'
 
   spec.homepage = 'https://nereare.github.io/radventure/'
   spec.metadata['homepage_uri'] = spec.homepage
