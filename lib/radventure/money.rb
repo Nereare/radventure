@@ -20,7 +20,7 @@ module Radventure
     # @param gold [Integer] The amount of gold for this money cache
     # @param silver [Integer] The amount of silver for this money cache
     # @param copper [Integer] The amount of copper for this money cache
-    # @returns [Money] Money object
+    # @return [Money] Money object
     def initialize(platinum, gold, silver, copper)
       @platinum = platinum.to_i
       @gold = gold.to_i

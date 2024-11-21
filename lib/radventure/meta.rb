@@ -28,7 +28,7 @@ module Radventure
     # Constructor method.
     #
     # @param yaml_file [String] The path to the game's metadata YAML file
-    # @returns [Meta] Game metadata object
+    # @return [Meta] Game metadata object
     def initialize(yaml_file)
       meta = fetch yaml_file
       @title = meta['title']

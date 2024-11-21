@@ -11,7 +11,7 @@ module Radventure
     @main_quest = nil
 
     # Constructor method.
-    # @returns [Game] Game execution
+    # @return [Game] Game execution
     def initialize
       @meta = Meta.new('game.yml')
       Texts.clear
