@@ -4,6 +4,11 @@
 [![License](https://img.shields.io/github/license/Nereare/radventure.svg)](LICENSE.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE-OF-CONDUCT.md)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/e395aca8d5d1b1026c60/maintainability)](https://codeclimate.com/github/Nereare/radventure/maintainability)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/Nereare/radventure)](https://libraries.io/github/Nereare/radventure)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nereare/radventure)](https://github.com/Nereare/radventure/commits/master/)
+![GitHub repo size](https://img.shields.io/github/repo-size/Nereare/radventure)
+
 A framework to develop text-base RPG games.
 
 ## Installing
@@ -12,7 +17,7 @@ A framework to develop text-base RPG games.
 TODO Set installation instructions
 BODY If there is some installation method, define it on the [README file](README.md).
 -->
-1. Foo.
+To be done...
 
 ## Contributing
 
