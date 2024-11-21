@@ -33,6 +33,16 @@ module Radventure
       clear
     end
 
+    # Outputs the room's name and description
+    #
+    # @param room [Room] The room to show
+    # @return [void]
+    def self.show_room(room)
+      puts Rainbow("## #{room.name} ##").blue.bright
+      puts room.description
+      puts ''
+    end
+
     def self.header
       # y, x = $stdout.winsize
       # puts Rainbow("+#{'=' * (x - 2)}+").italic

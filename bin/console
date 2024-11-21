@@ -4,7 +4,29 @@
 require 'bundler/setup'
 require_relative '../lib/radventure'
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+# Game example below
 
-Radventure::Game.new
+meta = Radventure::Meta.new(
+  'Console Test',
+  'Lorem ipsum dolor sit amet.',
+  '87.6.13-r9',
+  'Vladimir Ilych Ulianov',
+  'LGPL v3',
+  '1917',
+  prelude: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien felis, lobortis quis venenatis id, vehicula ' \
+  'nec tellus. Donec ultrices urna sapien, eu accumsan magna finibus at. Aliquam sit amet libero vulputate, malesuada' \
+  ' ex a, gravida ipsum. Aliquam malesuada quam a sapien molestie pulvinar. Curabitur nec ligula eget mauris placerat' \
+  ' aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis mollis ' \
+  'tempus diam, hendrerit rhoncus felis maximus in. Mauris non leo sem. Nulla lacinia urna sit amet lobortis volutpat' \
+  '. Integer ultricies semper diam ut cursus. Morbi tempus vehicula mauris. Morbi vulputate mi enim, sed tincidunt ' \
+  'ligula iaculis id. Curabitur convallis sed nisl sit amet sollicitudin.\n\nIn vestibulum non quam eu dignissim. ' \
+  'Quisque nec sem ut libero tincidunt pulvinar at id turpis. Lorem ipsum dolor sit amet, consectetur adipiscing ' \
+  'elit. Cras nisi libero, scelerisque in lorem in, blandit accumsan risus. Nulla fermentum velit maximus leo ' \
+  'sagittis, feugiat tempor ligula placerat. Duis fringilla vehicula mattis. Nulla vel tempus nisi.'
+)
+first_room = Radventure::Room.new(
+  'Test Room',
+  'Lorem ipsum dolor sit amet'
+)
+
+Radventure::Game.new(meta, first_room)

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'yaml'
-
 module Radventure
   # Defines game metadata
   #
@@ -27,17 +25,22 @@ module Radventure
 
     # Constructor method
     #
-    # @param yaml_file [String] The path to the game's metadata YAML file
+    # @param title [String] The title of the game
+    # @param description [String] The description of the game
+    # @param version [String] The version of the game, in accordance with SemVer
+    # @param author [String] The author of the game
+    # @param license [String] The license of the game
+    # @param year [String, Integer] The year(s) of the game
+    # @param prelude [String] The prelude text of the game
     # @return [Meta] Game metadata object
-    def initialize(yaml_file)
-      meta = fetch yaml_file
-      @title = meta['title']
-      @description = meta['description']
-      @version = meta['version']
-      @author = meta['author']
-      @license = meta['license']
-      @year = meta['year'].to_s
-      @prelude = meta['prelude'] || ''
+    def initialize(title, description, version, author, license, year, prelude: '')
+      @title = title.strip
+      @description = description.strip
+      @version = version.strip
+      @author = author.strip
+      @license = license.strip
+      @year = year.to_s.strip
+      @prelude = prelude.strip || ''
     end
 
     private
