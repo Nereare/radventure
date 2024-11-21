@@ -37,6 +37,7 @@ module Radventure
       @status        = nil
       @success_cache = success_cache
       @failure_cache = failure_cache
+      @cache         = nil
     end
 
     # Try to roll for this action
@@ -44,7 +45,14 @@ module Radventure
     # @param roll [Integer] The result of the roll
     # @return [Boolean] Whether the check succeeded or not
     def try(roll)
-      @status = roll.to_i >= @success if @status.nil?
+      if @status.nil?
+        @status = roll.to_i >= @success
+        @cache  = if @status
+                    @success_cache
+                  else
+                    @failure_cache
+                  end
+      end
 
       @status
     end
@@ -55,15 +63,20 @@ module Radventure
     def rewards
       if @status.nil?
         false
-      elsif @status
-        @success_cache
       else
-        @failure_cache
+        @cache
       end
     end
 
+    # Retrieve a reward (and remove it) from the available rewards list
+    #
+    # @return [nil, Item, Money] Returns the removed reward from the rewards list, or `nil` if no rewards match
     def get_reward(index)
-      #
+      if @cache.nil?
+        nil
+      else
+        @cache.delete_at index
+      end
     end
   end
 end
