@@ -1,7 +1,9 @@
 AllCops:
-  TargetRubyVersion: 3.3.x
+  TargetRubyVersion: 3.x.y
 Metrics/MethodLength:
   Max: 25
+Metrics/ClassLength:
+  Max: 200
 Metrics/ParameterLists:
   Max: 20
 Naming/MethodParameterName:
