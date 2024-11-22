@@ -29,4 +29,4 @@ first_room = Radventure::Room.new(
   'Lorem ipsum dolor sit amet'
 )
 
-Radventure::Game.new(meta, first_room)
+Radventure::Game.new(meta, 1, first_room)
