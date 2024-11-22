@@ -36,10 +36,42 @@ module Radventure
       # Begins game loop
       loop do
         case @status
-        when :explore
+        when :quitting
+          puts 'Are you sure you want to quit?'
+          break unless get_cmd(pre: '(y/N)') != 'y'
+        else
           Texts.show_room(@current_room)
         end
-        cmd = gets.strip
+        cmd = get_cmd
+        parse_command cmd
+      end
+    end
+
+    private
+
+    # Get a new action command from the player
+    #
+    # @param pre [String] A string to prepend to the `> ` carat
+    # @return [String] The given command, stripped of leading empty spaces, and downcased
+    def get_cmd(pre: '')
+      print "#{pre}> "
+      cmd = gets.strip.downcase
+      puts ''
+      cmd
+    end
+
+    # Parse the given command
+    #
+    # @param cmg [String] The given command
+    # @return [void]
+    def parse_command(cmd)
+      case cmd
+      when 'foo'
+        nil
+      when 'quit'
+        @status = :quitting
+      else
+        9
       end
     end
   end
